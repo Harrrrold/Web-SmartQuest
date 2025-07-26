@@ -1,11 +1,16 @@
 import React from 'react';
+import Sidebar from '../components/sidebar';
+import '../styles/global.css';
 
 const ModuleCreatorDashboard = () => {
   return (
-    <div>
-      {/* Placeholder para di mo error ika run */}
-      <h2>ModuleCreatorDashboard</h2>
-    </div>
+    <>
+      <Sidebar />
+      <div className="main-content">
+        {/* Your dashboard content will go here */}
+        <h2>Welcome to Module Creator Dashboard</h2>
+      </div>
+    </>
   );
 };
 

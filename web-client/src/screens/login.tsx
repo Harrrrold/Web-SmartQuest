@@ -14,7 +14,7 @@ const Login = () => {
 
   // Test credentials (for development only)
   const TEST_EMAIL = 'test@example.com';
-  const TEST_PASSWORD = 'password123';
+  const TEST_PASSWORD = '123123';
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();

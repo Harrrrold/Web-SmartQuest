@@ -311,3 +311,111 @@
 .confirm-password-button {
   margin-top: 1.5rem !important;
 }
+
+/* Sidebar styles */
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100vh;
+  background-color: #FFD700;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.sidebar-logo {
+  padding: 1rem;
+  width: 250px;
+  margin-bottom: 0rem;
+  margin-left: -1rem;
+  margin-top: 0rem;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.sidebar-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.sidebar-menu-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-menu-item.active {
+  background-color: rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  padding: 1rem;
+}
+
+/* Top header styles */
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 250px;
+  right: 0;
+  height: 60px;
+  background-color: #FFD700;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 2rem;
+  z-index: 100;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-info {
+  text-align: right;
+}
+
+.user-name {
+  font-weight: 500;
+  color: black;
+}
+
+.user-role {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Main content area */
+.main-content {
+  margin-left: 250px;
+  margin-top: 60px;
+  padding: 2rem;
+  min-height: calc(100vh - 60px);
+  background-color: #f5f5f5;
+}
