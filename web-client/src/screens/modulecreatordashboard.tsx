@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Dashboard = () => {
+const ModuleCreatorDashboard = () => {
   return (
     <div>
       {/* Placeholder para di mo error ika run */}
-      <h2>Dashboard</h2>
+      <h2>ModuleCreatorDashboard</h2>
     </div>
   );
 };
 
-export default Dashboard;
+export default ModuleCreatorDashboard;

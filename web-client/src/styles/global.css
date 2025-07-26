@@ -251,3 +251,63 @@
 .signup-button {
   margin-top: 1.5rem !important;
 }
+
+/* Forgot password page styles */
+.forgot-password-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  color: black;
+}
+
+.forgot-password-card h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.forgot-password-subtitle {
+  text-align: center;
+  color: #666;
+  margin: 1rem 0 2rem;
+}
+
+.resend-code {
+  color: #FF0000;
+  text-align: center;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.enter-code-button {
+  margin-top: 1rem !important;
+}
+
+/* Change password page styles */
+.change-password-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  color: black;
+}
+
+.change-password-card h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.change-password-subtitle {
+  text-align: center;
+  color: #666;
+  margin: 1rem 0 2rem;
+}
+
+.confirm-password-button {
+  margin-top: 1.5rem !important;
+}
