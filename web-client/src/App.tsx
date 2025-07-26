@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Welcome from './screens/welcome';
 import Login from './screens/login';
 import Register from './screens/register';
+import RegisterCredentials from './screens/registercredentials';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Welcome />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/register-credentials" element={<RegisterCredentials />} />
       </Routes>
     </BrowserRouter>
   );

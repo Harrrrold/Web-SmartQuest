@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Example = () => {
+const Dashboard = () => {
   return (
     <div>
       {/* Placeholder para di mo error ika run */}
@@ -9,4 +9,4 @@ const Example = () => {
   );
 };
 
-export default Example;
+export default Dashboard;
