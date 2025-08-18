@@ -20,7 +20,7 @@ const Login = () => {
     e.preventDefault();
     // Basic test authentication
     if (email === TEST_EMAIL && password === TEST_PASSWORD) {
-      navigate('/dashboard');
+      navigate('/modulecreator-dashboard');
     } else {
       alert('Invalid credentials. Please try again.');
     }
