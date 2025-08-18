@@ -15,7 +15,7 @@ type ModuleItem = {
   isArchived?: boolean;
 };
 
-const SAMPLE_MODULES: ModuleItem[] = [
+const INITIAL_MODULES: ModuleItem[] = [
   { id: '1', title: 'Fraction Adventure' },
   { id: '2', title: 'Shapes and Numbers' },
   { id: '3', title: 'Learning Shapes' },
@@ -25,20 +25,28 @@ const SAMPLE_MODULES: ModuleItem[] = [
 ];
 
 const ModuleCreatorModuleList: React.FC = () => {
+  const [modules, setModules] = useState<ModuleItem[]>(INITIAL_MODULES);
   const [activeTab, setActiveTab] = useState<'my' | 'archived'>('my');
   const [query, setQuery] = useState<string>('');
 
+  // Filter based on tab + search query
   const filteredModules = useMemo(() => {
-    const source = SAMPLE_MODULES.filter(m =>
+    const source = modules.filter(m =>
       activeTab === 'archived' ? m.isArchived : !m.isArchived
     );
     if (!query.trim()) return source;
     const q = query.toLowerCase();
     return source.filter(m => m.title.toLowerCase().includes(q));
-  }, [activeTab, query]);
+  }, [modules, activeTab, query]);
 
+  // === Actions ===
   const handleCreateModule = () => {
-    console.log('Create Module clicked');
+    const newModule: ModuleItem = {
+      id: Date.now().toString(),
+      title: `New Module ${modules.length + 1}`,
+      isArchived: false
+    };
+    setModules(prev => [...prev, newModule]);
   };
 
   const handlePreview = (moduleId: string) => {
@@ -49,16 +57,24 @@ const ModuleCreatorModuleList: React.FC = () => {
     console.log('Edit module', moduleId);
   };
 
-  const handleDelete = (moduleId: string) => {
-    console.log('Delete module', moduleId);
-  };
-
   const handleArchive = (moduleId: string) => {
-    console.log('Archive module', moduleId);
+    setModules(prev =>
+      prev.map(m =>
+        m.id === moduleId ? { ...m, isArchived: true } : m
+      )
+    );
   };
 
   const handleRestore = (moduleId: string) => {
-    console.log('Restore module', moduleId);
+    setModules(prev =>
+      prev.map(m =>
+        m.id === moduleId ? { ...m, isArchived: false } : m
+      )
+    );
+  };
+
+  const handleDelete = (moduleId: string) => {
+    setModules(prev => prev.filter(m => m.id !== moduleId));
   };
 
   return (
@@ -150,6 +166,10 @@ const ModuleCreatorModuleList: React.FC = () => {
                 </div>
               </div>
             ))}
+
+            {filteredModules.length === 0 && (
+              <div className="no-modules">No modules found.</div>
+            )}
           </div>
         </div>
       </div>
