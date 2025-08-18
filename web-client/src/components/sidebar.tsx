@@ -41,8 +41,8 @@ const Sidebar: React.FC<SidebarProps> = ({
         
         <div className="sidebar-menu">
           <div 
-            className={`sidebar-menu-item ${isActive('/dashboard') ? 'active' : ''}`}
-            onClick={() => navigate('/dashboard')}
+            className={`sidebar-menu-item ${isActive('/modulecreator-dashboard') ? 'active' : ''}`}
+            onClick={() => navigate('/modulecreator-dashboard')}
           >
             <DashboardIcon />
             <span>Dashboard</span>

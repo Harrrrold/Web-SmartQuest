@@ -6,7 +6,7 @@ import Register from './screens/register';
 import RegisterCredentials from './screens/registercredentials';
 import ForgetPassword from './screens/forgetpassword';
 import ChangePassword from './screens/changepassword';
-import ModuleCreatorDashboard from './screens/modulecreatordashboard';
+import ModuleCreatorDashboard from './modulecreator-screens/modulecreator-dashboard';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route path="/register-credentials" element={<RegisterCredentials />} />
         <Route path="/forgetpassword" element={<ForgetPassword />} />
         <Route path="/changepassword" element={<ChangePassword />} />
-        <Route path="/dashboard" element={<ModuleCreatorDashboard />} />
+        <Route path="/modulecreator-dashboard" element={<ModuleCreatorDashboard />} />
       </Routes>
     </BrowserRouter>
   );
