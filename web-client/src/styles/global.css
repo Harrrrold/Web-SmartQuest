@@ -419,3 +419,151 @@
   min-height: calc(100vh - 60px);
   background-color: #f5f5f5;
 }
+
+/* Module Management (Module List) */
+.module-management {
+  background-color: #f5f5f5;
+}
+
+.module-management-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.module-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tabs {
+  display: flex;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.25rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+
+.tab-button {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #444;
+}
+
+.tab-button.active {
+  background: #FFD700;
+  color: #000;
+}
+
+.search-and-create {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  border-radius: 20px;
+  padding: 0.35rem 0.75rem;
+  width: 260px;
+  box-shadow: inset 0 0 0 1px #eee;
+}
+
+.search-icon {
+  color: #777;
+  font-size: 1.1rem;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+}
+
+.create-button {
+  background: #FFD700;
+  color: #000;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.module-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.module-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ff6d00;
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+}
+
+.module-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.module-icon-tile {
+  width: 120px;
+  height: 40px;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.module-title {
+  color: #fff;
+  font-weight: 600;
+}
+
+.module-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.action-button {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  background: #fff;
+}
+
+.action-button.yellow {
+  background: #ffeb3b;
+}
+
+.action-button.green {
+  background: #8bc34a;
+}
+
+.action-button.red {
+  background: #ef5350;
+}
