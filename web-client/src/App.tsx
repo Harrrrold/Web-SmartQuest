@@ -11,6 +11,11 @@ import ModuleCreatorModuleList from './modulecreator-screens/modulecreator-modul
 import ModuleCreatorMenu from './modulecreator-screens/modulecreator-menu';
 import ModuleCreatorCreateModule from './modulecreator-screens/modulecreator-create-module';
 import ModuleCreatorEditLevel from './modulecreator-screens/modulecreator-edit-level';
+import ModuleCreatorProfile from './modulecreator-screens/modulecreator-profile';
+import ModuleCreatorPaymentMethod from './modulecreator-screens/modulecreator-payment-method';
+import ModuleCreatorSettings from './modulecreator-screens/modulecreator-settings';
+import ModuleCreatorAbout from './modulecreator-screens/modulecreator-about';
+import ModuleCreatorTermsAndAgreement from './modulecreator-screens/modulecreator-terms-and-agreement';
 
 function App() {
   return (
@@ -27,6 +32,11 @@ function App() {
         <Route path="/modulecreator-menu" element={<ModuleCreatorMenu />} />
         <Route path="/modulecreator-create-module" element={<ModuleCreatorCreateModule />} />
         <Route path="/modulecreator-edit-level" element={<ModuleCreatorEditLevel />} />
+        <Route path="/modulecreator-profile" element={<ModuleCreatorProfile />} />
+        <Route path="/modulecreator-payment-method" element={<ModuleCreatorPaymentMethod />} />
+        <Route path="/modulecreator-settings" element={<ModuleCreatorSettings />} />
+        <Route path="/modulecreator-about" element={<ModuleCreatorAbout />} />
+        <Route path="/modulecreator-terms-and-agreement" element={<ModuleCreatorTermsAndAgreement />} />
       </Routes>
     </BrowserRouter>
   );

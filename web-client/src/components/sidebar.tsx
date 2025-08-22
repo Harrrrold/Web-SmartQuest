@@ -76,8 +76,8 @@ const Sidebar: React.FC<SidebarProps> = ({
           </div>
 
           <div 
-            className={`sidebar-menu-item ${isActive('/profile') ? 'active' : ''}`}
-            onClick={() => navigate('/profile')}
+            className={`sidebar-menu-item ${isActive('/modulecreator-profile') ? 'active' : ''}`}
+            onClick={() => navigate('/modulecreator-profile')}
           >
             <AccountCircleIcon />
             <span>Profile</span>
