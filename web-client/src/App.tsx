@@ -9,6 +9,8 @@ import ChangePassword from './screens/changepassword';
 import ModuleCreatorDashboard from './modulecreator-screens/modulecreator-dashboard';
 import ModuleCreatorModuleList from './modulecreator-screens/modulecreator-modulelist';
 import ModuleCreatorMenu from './modulecreator-screens/modulecreator-menu';
+import ModuleCreatorCreateModule from './modulecreator-screens/modulecreator-create-module';
+import ModuleCreatorEditLevel from './modulecreator-screens/modulecreator-edit-level';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/modulecreator-dashboard" element={<ModuleCreatorDashboard />} />
         <Route path="/modulecreator-modulelist" element={<ModuleCreatorModuleList />} />
         <Route path="/modulecreator-menu" element={<ModuleCreatorMenu />} />
+        <Route path="/modulecreator-create-module" element={<ModuleCreatorCreateModule />} />
+        <Route path="/modulecreator-edit-level" element={<ModuleCreatorEditLevel />} />
       </Routes>
     </BrowserRouter>
   );

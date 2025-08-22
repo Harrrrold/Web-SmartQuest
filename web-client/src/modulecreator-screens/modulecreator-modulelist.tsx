@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Sidebar from '../components/sidebar';
 import '../styles/global.css';
 import SearchIcon from '@mui/icons-material/Search';
@@ -8,11 +8,15 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ArchiveIcon from '@mui/icons-material/Archive';
 import RestoreIcon from '@mui/icons-material/Restore';
+import { useNavigate } from 'react-router-dom';
 
 type ModuleItem = {
   id: string;
   title: string;
   isArchived?: boolean;
+  price?: string;
+  description?: string;
+  levels?: { id: string; title: string }[];
 };
 
 const INITIAL_MODULES: ModuleItem[] = [
@@ -24,10 +28,36 @@ const INITIAL_MODULES: ModuleItem[] = [
   { id: '6', title: 'Archived Algebra Basics', isArchived: true }
 ];
 
+const STORAGE_KEY = 'sq_modules';
+
+const readModulesFromStorage = (): ModuleItem[] => {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return INITIAL_MODULES;
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed)) return parsed as ModuleItem[];
+    return INITIAL_MODULES;
+  } catch {
+    return INITIAL_MODULES;
+  }
+};
+
+const writeModulesToStorage = (items: ModuleItem[]) => {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+  } catch {
+    // ignore
+  }
+};
+
 const ModuleCreatorModuleList: React.FC = () => {
-  const [modules, setModules] = useState<ModuleItem[]>(INITIAL_MODULES);
+  const [modules, setModules] = useState<ModuleItem[]>(readModulesFromStorage());
+  useEffect(() => {
+    writeModulesToStorage(modules);
+  }, [modules]);
   const [activeTab, setActiveTab] = useState<'my' | 'archived'>('my');
   const [query, setQuery] = useState<string>('');
+  const navigate = useNavigate();
 
   // Filter based on tab + search query
   const filteredModules = useMemo(() => {
@@ -41,12 +71,7 @@ const ModuleCreatorModuleList: React.FC = () => {
 
   // === Actions ===
   const handleCreateModule = () => {
-    const newModule: ModuleItem = {
-      id: Date.now().toString(),
-      title: `New Module ${modules.length + 1}`,
-      isArchived: false
-    };
-    setModules(prev => [...prev, newModule]);
+    navigate('/modulecreator-create-module');
   };
 
   const handlePreview = (moduleId: string) => {
@@ -54,23 +79,15 @@ const ModuleCreatorModuleList: React.FC = () => {
   };
 
   const handleEdit = (moduleId: string) => {
-    console.log('Edit module', moduleId);
+    navigate('/modulecreator-create-module', { state: { moduleId } });
   };
 
   const handleArchive = (moduleId: string) => {
-    setModules(prev =>
-      prev.map(m =>
-        m.id === moduleId ? { ...m, isArchived: true } : m
-      )
-    );
+    setModules(prev => prev.map(m => (m.id === moduleId ? { ...m, isArchived: true } : m)));
   };
 
   const handleRestore = (moduleId: string) => {
-    setModules(prev =>
-      prev.map(m =>
-        m.id === moduleId ? { ...m, isArchived: false } : m
-      )
-    );
+    setModules(prev => prev.map(m => (m.id === moduleId ? { ...m, isArchived: false } : m)));
   };
 
   const handleDelete = (moduleId: string) => {
@@ -110,9 +127,11 @@ const ModuleCreatorModuleList: React.FC = () => {
                   onChange={(e) => setQuery(e.target.value)}
                 />
               </div>
+              {activeTab === 'my' && (
               <button className="create-button" onClick={handleCreateModule}>
                 Create Module
               </button>
+               )}
             </div>
           </div>
 
