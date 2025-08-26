@@ -41,24 +41,24 @@ const Sidebar: React.FC<SidebarProps> = ({
         
         <div className="sidebar-menu">
           <div 
-            className={`sidebar-menu-item ${isActive('/dashboard') ? 'active' : ''}`}
-            onClick={() => navigate('/dashboard')}
+            className={`sidebar-menu-item ${isActive('/modulecreator-dashboard') ? 'active' : ''}`}
+            onClick={() => navigate('/modulecreator-dashboard')}
           >
             <DashboardIcon />
             <span>Dashboard</span>
           </div>
 
           <div 
-            className={`sidebar-menu-item ${isActive('/modules') ? 'active' : ''}`}
-            onClick={() => navigate('/modules')}
+            className={`sidebar-menu-item ${isActive('/modulecreator-modulelist') ? 'active' : ''}`}
+            onClick={() => navigate('/modulecreator-modulelist')}
           >
             <MenuBookIcon />
             <span>Modules</span>
           </div>
 
           <div 
-            className={`sidebar-menu-item ${isActive('/menu') ? 'active' : ''}`}
-            onClick={() => navigate('/menu')}
+            className={`sidebar-menu-item ${isActive('/modulecreator-menu') ? 'active' : ''}`}
+            onClick={() => navigate('/modulecreator-menu')}
           >
             <MenuIcon />
             <span>Menu</span>
@@ -76,8 +76,8 @@ const Sidebar: React.FC<SidebarProps> = ({
           </div>
 
           <div 
-            className={`sidebar-menu-item ${isActive('/profile') ? 'active' : ''}`}
-            onClick={() => navigate('/profile')}
+            className={`sidebar-menu-item ${isActive('/modulecreator-profile') ? 'active' : ''}`}
+            onClick={() => navigate('/modulecreator-profile')}
           >
             <AccountCircleIcon />
             <span>Profile</span>

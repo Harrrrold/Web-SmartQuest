@@ -2,16 +2,16 @@ import React from 'react';
 import Sidebar from '../components/sidebar';
 import '../styles/global.css';
 
-const ModuleCreatorDashboard = () => {
+const ModuleCreatorNotification = () => {
   return (
     <>
       <Sidebar />
       <div className="main-content">
-        {/* Your dashboard content will go here */}
-        <h2>Welcome to Module Creator Dashboard</h2>
+        {/* Your content will go here */}
+        <h2>Welcome to Module Creator Notification</h2>
       </div>
     </>
   );
 };
 
-export default ModuleCreatorDashboard;
+export default ModuleCreatorNotification;
