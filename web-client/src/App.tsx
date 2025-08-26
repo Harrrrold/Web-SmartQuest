@@ -17,6 +17,7 @@ import ModuleCreatorSettings from './modulecreator-screens/modulecreator-setting
 import ModuleCreatorAbout from './modulecreator-screens/modulecreator-about';
 import ModuleCreatorTermsAndAgreement from './modulecreator-screens/modulecreator-terms-and-agreement';
 import ModuleCreatorProfileEdit from './modulecreator-screens/modulecreator-profile-edit';
+import ModuleCreatorChangePassword from './modulecreator-screens/modulecreator-change-password';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path="/modulecreator-about" element={<ModuleCreatorAbout />} />
         <Route path="/modulecreator-terms-and-agreement" element={<ModuleCreatorTermsAndAgreement />} />
         <Route path="/modulecreator-profile-edit" element={<ModuleCreatorProfileEdit />} />
+        <Route path="/modulecreator-change-password" element={<ModuleCreatorChangePassword />} />
       </Routes>
     </BrowserRouter>
   );
