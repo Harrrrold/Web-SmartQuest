@@ -5,6 +5,7 @@ import MenuBookIcon from '@mui/icons-material/MenuBook';
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import smartQuestLogo from '../assets/SmartQuest Logo.png';
 import '../styles/global.css';
 
@@ -89,6 +90,14 @@ const Sidebar: React.FC<SidebarProps> = ({
       {/* Top Header */}
       <div className="top-header">
         <div className="user-profile">
+          <div 
+            className="notification-button" 
+            title="Notifications"
+            onClick={() => navigate('/modulecreator-notification')}
+          >
+            <NotificationsNoneIcon />
+            <span className="notification-dot" />
+          </div>
           <div className="user-info">
             <div className="user-name">{userName}</div>
             <div className="user-role">{userRole}</div>

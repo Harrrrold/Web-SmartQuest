@@ -15,7 +15,7 @@ const ModuleCreatorDashboard = () => {
       <div className="main-content">
         <div className="dashboard">
           <div className="dashboard-header">
-            <h1>Dashboard</h1>
+            <div className="screen-title">Dashboard</div>
           </div>
 
           {/* Key Metrics Section */}

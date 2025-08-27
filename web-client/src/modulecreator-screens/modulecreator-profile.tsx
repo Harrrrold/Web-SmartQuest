@@ -11,7 +11,7 @@ const ModuleCreatorProfile = () => {
       <Sidebar />
       <div className="main-content">
         <div className="profile-screen">
-          <div className="menu-header">Module Creator</div>
+          <div className="screen-title">Module Creator</div>
 
           <div className="profile-header">
             <div className="user-avatar-large">

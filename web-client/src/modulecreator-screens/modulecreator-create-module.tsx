@@ -99,7 +99,7 @@ const ModuleCreatorCreateModule: React.FC = () => {
       <Sidebar />
       <div className="main-content">
         <div className="create-module">
-          <div className="create-module-header">{editingModuleId ? 'Edit Module' : 'Create Module'}</div>
+          <div className="screen-title">{editingModuleId ? 'Edit Module' : 'Create Module'}</div>
 
           <div className="card-section">
             <div className="row two-col">

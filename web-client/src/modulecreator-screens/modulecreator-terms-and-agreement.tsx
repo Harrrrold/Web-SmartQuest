@@ -9,7 +9,7 @@ const ModuleCreatorTermsAndAgreement = () => {
       <Sidebar />
       <div className="main-content">
         <div className="terms-screen">
-          <div className="about-title">Terms and Agreement</div>
+          <div className="screen-title">Terms and Agreement</div>
 
           <div className="brand-logo-large">
             <img src={Logo2} alt="SmartQuest" />

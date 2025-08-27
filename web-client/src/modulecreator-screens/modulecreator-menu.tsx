@@ -54,7 +54,7 @@ const ModuleCreatorMenu = () => {
       <Sidebar />
       <div className="main-content">
         <div className="module-creator-menu">
-          <div className="menu-header">Module Creator</div>
+          <div className="screen-title">Module Creator</div>
           
           <div className="user-profile-section">
             <div className="user-avatar-large">

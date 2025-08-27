@@ -11,7 +11,7 @@ const ModuleCreatorSettings = () => {
       <Sidebar />
       <div className="main-content">
         <div className="settings-screen">
-          <div className="settings-title">Settings</div>
+          <div className="screen-title">Settings</div>
 
           <div className="settings-card" onClick={() => navigate('/modulecreator-change-password')}>
             <div className="settings-card-icon"><LockIcon /></div>
