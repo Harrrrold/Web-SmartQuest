@@ -38,6 +38,8 @@ const Sidebar: React.FC<SidebarProps> = ({
           src={smartQuestLogo}
           alt="SmartQuest Logo" 
           className="sidebar-logo"
+          onClick={() => navigate('/modulecreator-dashboard')}
+          style={{ cursor: 'pointer' }}
         />
         
         <div className="sidebar-menu">
