@@ -156,7 +156,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           <div 
             className="notification-button" 
             title="Notifications"
-            onClick={() => navigate('/modulecreator-notification')}
+            onClick={() => userRole === 'Admin' ? navigate('/admin-notification') : navigate('/modulecreator-notification')}
           >
             <NotificationsNoneIcon />
             <span className="notification-dot" />
