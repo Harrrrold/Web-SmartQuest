@@ -89,7 +89,7 @@ const ModuleCreatorEditLevel: React.FC = () => {
       <Sidebar />
       <div className="main-content">
         <div className="create-level">
-          <div className="create-level-header">Create Level</div>
+          <div className="screen-title">Create Level</div>
 
           <div className="card-section">
             <div className="field">

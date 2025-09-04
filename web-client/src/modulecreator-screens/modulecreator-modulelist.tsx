@@ -20,9 +20,18 @@ type ModuleItem = {
 };
 
 const INITIAL_MODULES: ModuleItem[] = [
-  { id: '1', title: 'Fraction Adventure' },
-  { id: '2', title: 'Shapes and Numbers' },
-  { id: '3', title: 'Learning Shapes' },
+  { 
+    id: '1', 
+    title: 'Fraction Adventure',
+    description: 'A casual yet challenging math module for any range of age!',
+    levels: [
+      { id: 'l1', title: 'Level 1' },
+      { id: 'l2', title: 'Level 2' },
+      { id: 'l3', title: 'Level 3' }
+    ]
+  },
+  { id: '2', title: 'Shapes and Numbers', description: 'Recognize shapes and count numbers with fun visuals.', levels: [ { id: 'l1', title: 'Level 1' } ] },
+  { id: '3', title: 'Learning Shapes', description: 'Identify and classify 2D and 3D shapes.', levels: [ { id: 'l1', title: 'Level 1' }, { id: 'l2', title: 'Level 2' } ] },
   { id: '4', title: 'Archived Fractions', isArchived: true },
   { id: '5', title: 'Old Geometry Module', isArchived: true },
   { id: '6', title: 'Archived Algebra Basics', isArchived: true }
@@ -75,7 +84,8 @@ const ModuleCreatorModuleList: React.FC = () => {
   };
 
   const handlePreview = (moduleId: string) => {
-    console.log('Preview module', moduleId);
+    const mod = modules.find(m => m.id === moduleId);
+    navigate('/modulecreator-module-content', { state: { module: mod } });
   };
 
   const handleEdit = (moduleId: string) => {
@@ -99,7 +109,7 @@ const ModuleCreatorModuleList: React.FC = () => {
       <Sidebar />
       <div className="main-content">
         <div className="module-management">
-          <div className="module-management-header">Module Management</div>
+          <div className="screen-title">Module Management</div>
 
           <div className="module-controls">
             <div className="tabs">
@@ -138,7 +148,7 @@ const ModuleCreatorModuleList: React.FC = () => {
           <div className="module-list">
             {filteredModules.map((mod) => (
               <div key={mod.id} className="module-item">
-                <div className="module-left">
+                <div className="module-left" onClick={() => navigate('/modulecreator-module-content', { state: { module: mod } })}>
                   <div className="module-icon-tile">
                     <MenuBookIcon />
                   </div>

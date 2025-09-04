@@ -46,7 +46,7 @@ const ModuleCreatorChangePassword = () => {
       <Sidebar />
       <div className="main-content">
         <div className="change-password-screen">
-          <div className="settings-title">Change Password</div>
+          <div className="screen-title">Change Password</div>
           <form className="change-password-form" onSubmit={handleSubmit}>
             <label className="edit-label">Enter Old Password</label>
             <input className={`input ${errors.old ? 'error' : ''}`} type="password" value={oldPassword} onChange={(e) => setOldPassword(e.target.value)} />

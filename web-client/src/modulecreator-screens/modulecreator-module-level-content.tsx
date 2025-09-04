@@ -7,8 +7,7 @@ const ModuleCreatorModuleLevelContent = () => {
     <>
       <Sidebar />
       <div className="main-content">
-        {/* Your content will go here */}
-        <h2>Welcome to Module Creator Module Level Content</h2>
+        <div className="screen-title">Module Level Content</div>
       </div>
     </>
   );

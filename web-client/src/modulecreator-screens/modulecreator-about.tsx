@@ -9,7 +9,7 @@ const ModuleCreatorAbout = () => {
       <Sidebar />
       <div className="main-content">
         <div className="about-screen">
-          <div className="about-title">About</div>
+          <div className="screen-title">About</div>
 
           <div className="brand-logo-large">
             <img src={Logo2} alt="SmartQuest" />

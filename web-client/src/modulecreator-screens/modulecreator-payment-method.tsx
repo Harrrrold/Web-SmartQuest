@@ -7,8 +7,7 @@ const ModuleCreatorPaymentMethod = () => {
     <>
       <Sidebar />
       <div className="main-content">
-        {/* Your content will go here */}
-        <h2>Welcome to Module Creator Payment Method</h2>
+        <div className="screen-title">Payment Method</div>
       </div>
     </>
   );

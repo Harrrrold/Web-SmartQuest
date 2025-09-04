@@ -26,7 +26,7 @@ const ModuleCreatorProfileEdit = () => {
       <Sidebar />
       <div className="main-content">
         <div className="profile-edit-screen">
-          <div className="menu-header">Module Creator</div>
+          <div className="screen-title">Module Creator</div>
 
           <form className="profile-edit-form" onSubmit={handleSave}>
             <div className="user-avatar-large" style={{ marginBottom: '1rem' }}>
