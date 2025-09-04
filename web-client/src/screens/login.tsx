@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import '../styles/global.css';
+// @ts-ignore - image import handled by bundler
 import backgroundImage from '../assets/Background.gif';
 
 const Login = () => {
@@ -15,15 +16,27 @@ const Login = () => {
   // Test credentials (for development only)
   const TEST_EMAIL = 'test@example.com';
   const TEST_PASSWORD = '123123';
+  const ADMIN_EMAIL = 'admin@example.com';
+  const ADMIN_PASSWORD = 'admin123';
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // Basic test authentication
-    if (email === TEST_EMAIL && password === TEST_PASSWORD) {
-      navigate('/modulecreator-dashboard');
-    } else {
-      alert('Invalid credentials. Please try again.');
+    // Basic role-based test authentication
+    if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+      localStorage.setItem('role', 'Admin');
+      localStorage.setItem('userName', 'Admin Account');
+      navigate('/admin-dashboard');
+      return;
     }
+
+    if (email === TEST_EMAIL && password === TEST_PASSWORD) {
+      localStorage.setItem('role', 'Module Creator');
+      localStorage.setItem('userName', 'Macy Rey');
+      navigate('/modulecreator-dashboard');
+      return;
+    }
+
+    alert('Invalid credentials. Please try again.');
   };
 
   return (
